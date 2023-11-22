@@ -1,0 +1,61 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DeepProyect
+build_property.RootNamespace = DeepProyect
+build_property.ProjectDir = C:\Users\Jun\OneDrive\School\4th Year\2nd Semester\Deel Learning\retail_products_classification\frontend\DeepProyect\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Jun\OneDrive\School\4th Year\2nd Semester\Deel Learning\retail_products_classification\frontend\DeepProyect
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Jun/OneDrive/School/4th Year/2nd Semester/Deel Learning/retail_products_classification/frontend/DeepProyect/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jun/OneDrive/School/4th Year/2nd Semester/Deel Learning/retail_products_classification/frontend/DeepProyect/Pages/Model1.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kZWwxLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jun/OneDrive/School/4th Year/2nd Semester/Deel Learning/retail_products_classification/frontend/DeepProyect/Pages/Model2.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kZWwyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jun/OneDrive/School/4th Year/2nd Semester/Deel Learning/retail_products_classification/frontend/DeepProyect/Pages/Model3.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kZWwzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jun/OneDrive/School/4th Year/2nd Semester/Deel Learning/retail_products_classification/frontend/DeepProyect/Pages/Model4.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kZWw0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jun/OneDrive/School/4th Year/2nd Semester/Deel Learning/retail_products_classification/frontend/DeepProyect/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jun/OneDrive/School/4th Year/2nd Semester/Deel Learning/retail_products_classification/frontend/DeepProyect/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jun/OneDrive/School/4th Year/2nd Semester/Deel Learning/retail_products_classification/frontend/DeepProyect/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-gzgvllorxx
+
+[C:/Users/Jun/OneDrive/School/4th Year/2nd Semester/Deel Learning/retail_products_classification/frontend/DeepProyect/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-rh0l0t9c1i
+
+[C:/Users/Jun/OneDrive/School/4th Year/2nd Semester/Deel Learning/retail_products_classification/frontend/DeepProyect/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jun/OneDrive/School/4th Year/2nd Semester/Deel Learning/retail_products_classification/frontend/DeepProyect/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

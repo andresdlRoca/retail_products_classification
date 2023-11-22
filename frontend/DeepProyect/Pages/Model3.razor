@@ -1,0 +1,113 @@
+﻿@page "/model3"
+@inject HttpClient Http
+@using System.Net.Http.Headers
+@using Newtonsoft.Json
+@using System.Collections.Generic
+
+<div class="card card-bordered">
+    <!--begin::Header-->
+    <div class="card-header pt-5">
+        <h3>Model 3</h3>
+    </div>
+    <!--end::Header-->
+    <!--begin::Body-->
+    <div class="card-body">
+        <InputFile OnChange="UploadFile" />
+    </div>
+    <!--end::Body-->
+    <!--begin::Footer-->
+    <div class="card-footer pt-5">
+        <div class="bottom-container m-5">
+
+            @if (isLoading)
+            {
+                <img src="src/loading.gif" alt="Loading GIF" width="100" height="100" />
+            }
+
+            @if (result is not null)
+            {
+                <h3>Prediccion: @result</h3>
+            }
+        </div>
+    </div>
+    <!--end::Footer-->
+</div>
+
+@code {
+    private string predictionResult;
+    private List<float> predictionList;
+    int largestIndex = 10;
+    string result;
+    public bool isLoading = false;
+
+    private async Task UploadFile(InputFileChangeEventArgs e)
+    {
+        isLoading = true;
+        var imageFile = e.File;
+        if (imageFile != null)
+        {
+            using var content = new MultipartFormDataContent();
+            using var fileContent = new StreamContent(imageFile.OpenReadStream(maxFileSize));
+            fileContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
+            content.Add(fileContent, "image", imageFile.Name);
+
+            var response = await Http.PostAsync("http://localhost:5000/predict/model3", content);
+            if (response.IsSuccessStatusCode)
+            {
+                StateHasChanged();
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                predictionResult = jsonResponse; // Keep the JSON response
+
+                // Deserialize the JSON response
+                var predictionResponse = JsonConvert.DeserializeObject<PredictionResponse>(jsonResponse);
+                if (predictionResponse?.Predictions != null && predictionResponse.Predictions.Count > 0)
+                {
+                    predictionList = predictionResponse.Predictions[0];
+                    // Now predictionList contains the list of predictions
+                    predictionResult = string.Join(", ", predictionList); // Update predictionResult to show the list
+
+                    float largestValue = predictionList[0];
+
+                    for (int i = 1; i < predictionList.Count; i++)
+                    {
+                        if (predictionList[i] > largestValue)
+                        {
+                            largestValue = predictionList[i];
+                            largestIndex = i;
+                        }
+                    }
+
+                    if (largestIndex == 0)
+                    {
+                        result = "Tecnologia";
+                    }
+                    else if (largestIndex == 1)
+                    {
+                        result = "Alimentos";
+                    }
+                    else if (largestIndex == 2)
+                    {
+                        result = "Mobiliario";
+                    }
+                    else if (largestIndex == 3)
+                    {
+                        result = "Prendas";
+                    }
+                }
+            }
+            else
+            {
+                predictionResult = "Error: Unable to get prediction";
+            }
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    private const long maxFileSize = 1024 * 1024 * 15; // 15 MB
+
+    public class PredictionResponse
+    {
+        public List<List<float>> Predictions { get; set; }
+    }
+}
